@@ -11,6 +11,10 @@ app.use(fileupload({ useTempFiles: true }));
 // Set static folder
 app.use(express.static(path.join(__basedir + "public")));
 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
+
 app.post("/upload", async (req, res) => {
   if (req.files == undefined) {
     return res
