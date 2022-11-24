@@ -6,6 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 const app = express();
 global.__basedir = __dirname;
 const fileupload = require("express-fileupload");
+let PORT = process.env.PORT || 5002;
 // File uploading
 app.use(fileupload({ useTempFiles: true }));
 // Set static folder
@@ -53,6 +54,6 @@ app.post("/upload", async (req, res) => {
   }
 });
 
-app.listen(5002, () => {
+app.listen(PORT, () => {
   console.log("App listening on port 5002!");
 });

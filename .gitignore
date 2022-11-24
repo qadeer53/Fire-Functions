@@ -48,6 +48,7 @@ build/Release
 node_modules/
 uploads/
 tmp/
+config/config.env
 
 # Optional npm cache directory
 .npm
